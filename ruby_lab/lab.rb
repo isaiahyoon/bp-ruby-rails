@@ -23,7 +23,11 @@ def monte_carlo(num_samples = 1000)
     # Then, increment hits by the number of times (x, y) is within the circle
     # x^2 + y^2 = 1
     # *********** YOUR CODE BEGINS HERE *********** #
-
+    x = rng.rand(0.0..2.0)
+    y = rng.rand(0.0..2.0)
+    if x ** 2 + y ** 2 <= 1 
+      hits += 1
+    end
     # *********** YOUR CODE ENDS HERE *********** #
   end
 
@@ -48,7 +52,7 @@ def roboticize(string)
   # This should get you familiar with strings, iterators, and blocks
 
   # *********** YOUR CODE HERE *********** #
-  nil
+  string.split.each { |word| word.capitalize }.join(". ")
 end
 
 
@@ -100,7 +104,7 @@ def scrabble(word)
     z: 10,
   }
   # *********** YOUR CODE HERE *********** #
-  nil
+  word.split("")
 end
 
 
